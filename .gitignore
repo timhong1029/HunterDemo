@@ -1,49 +1,61 @@
-# Unreal Engine clean setup for Hunter project
-# --- Ignore heavy build and cache directories ---
-Binaries
-DerivedDataCache
-Intermediate
-Saved
-.vs
-.vscode
+# =========================================================
+# Unreal Engine - Clean setup for gameplay programmer demos
+# Author: 洪超宇 (Hunter Project)
+# =========================================================
 
-# --- Ignore StarterContent and temporary content ---
-ContentStarterContent
-ContentDevelopers
-ContentCollections
-Content__ExternalActors__
-Content__ExternalObjects__
+# === Unreal auto-generated folders ===
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+.vs/
+.vscode/
 
-# --- Ignore large non-essential folders in 0_Tim ---
-Content0_TimAudio
-Content0_TimFX
-Content0_TimMaterials
-Content0_TimMaps
-Content0_TimTest
+# === Ignore heavy UE content ===
+# Large binary assets that quickly bloat repo
+Content/**/Animations/
+Content/**/Meshes/
+Content/**/Textures/
+Content/**/Audio/
+Content/**/FX/
+Content/**/Materials/
+Content/**/Maps/
+Content/**/Cinematic/
+Content/**/VFX/
+Content/**/Environment/
+Content/**/Test/
 
-# --- Always keep your core logic and gameplay systems ---
-!Config
-!Source
-!Content0_TimBlueprints
-!Content0_TimCharacters
-!Content0_TimComponents
-!Content0_TimData
-!Content0_TimSystems
-!Content0_TimUI
-!Hunter.uproject
-!.gitignore
+# === Keep lightweight gameplay-related content ===
+!Content/0_Tim/Blueprints/**
+!Content/0_Tim/Characters/**/DataAssets/**
+!Content/0_Tim/Components/**
+!Content/0_Tim/Data/**
+!Content/0_Tim/Systems/**
+!Content/0_Tim/UI/**
+!Content/0_Tim/Common/**
+!Content/0_Tim/Debug/**
+!Content/0_Tim/Tools/**
+
+# === Config & Source ===
+!Source/**
+!Config/**
+!*.uproject
 !README.md
+!.gitignore
 
-# --- Ignore temporary and OS-specific files ---
-.log
-.sln
-.opensdf
-.suo
-.xcodeproj
-.xcworkspace
-.dll
-.exe
-.pdb
+# === OS / IDE files ===
 .DS_Store
 Thumbs.db
 desktop.ini
+*.sln
+*.opensdf
+*.suo
+*.xcodeproj
+*.xcworkspace
+*.VC.db
+*.VC.opendb
+*.user
+*.log
+*.obj
+*.pdb
+*.tmp
