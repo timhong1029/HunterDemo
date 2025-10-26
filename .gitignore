@@ -1,8 +1,4 @@
-# =========================================================
-# Unreal Engine - Hunter clean version (only 0_Tim content)
-# =========================================================
-
-# --- Unreal auto-generated folders ---
+# --- UE 自生成目录 ---
 Binaries/
 DerivedDataCache/
 Intermediate/
@@ -10,42 +6,38 @@ Saved/
 .vs/
 .vscode/
 
-# --- Ignore all Content except 0_Tim ---
-Content/**
+# --- 先忽略整个 Content（父目录先被忽略）---
+Content/*
+
+# --- 再放行 Content 本身与 0_Tim（解除父目录忽略）---
 !Content/
+!Content/0_Tim/
 !Content/0_Tim/**
+
+# --- 在 0_Tim 里重新忽略大资源（最后匹配生效）---
+Content/0_Tim/**/Animations/**
+Content/0_Tim/**/Meshes/**
+Content/0_Tim/**/Textures/**
+Content/0_Tim/**/Audio/**
+Content/0_Tim/**/FX/**
+Content/0_Tim/**/Materials/**
+Content/0_Tim/**/Maps/**
+Content/0_Tim/**/Test/**
+Content/0_Tim/**/Environment/**
+Content/0_Tim/**/Cinematic/**
+Content/0_Tim/**/VFX/**
+
+# --- 代码与配置始终要 ---
 !Source/**
 !Config/**
 !*.uproject
 !README.md
 !.gitignore
 
-# --- Inside 0_Tim, ignore heavy resource subfolders ---
-Content/0_Tim/**/Animations/
-Content/0_Tim/**/Meshes/
-Content/0_Tim/**/Textures/
-Content/0_Tim/**/Audio/
-Content/0_Tim/**/FX/
-Content/0_Tim/**/Materials/
-Content/0_Tim/**/Maps/
-Content/0_Tim/**/Test/
-Content/0_Tim/**/Environment/
-Content/0_Tim/**/Cinematic/
-Content/0_Tim/**/VFX/
-
-# --- OS and IDE garbage ---
+# --- 杂项 ---
 .DS_Store
 Thumbs.db
 desktop.ini
-*.sln
-*.opensdf
-*.suo
-*.xcodeproj
-*.xcworkspace
-*.VC.db
-*.VC.opendb
-*.user
 *.log
-*.obj
+*.sln
 *.pdb
-*.tmp
