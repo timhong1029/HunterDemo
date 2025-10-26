@@ -10,10 +10,9 @@ Saved/
 .vs/
 .vscode/
 
-# --- Ignore all Content by default ---
+# --- Ignore all Content except 0_Tim ---
 Content/**
-
-# --- Keep only your custom gameplay folder ---
+!Content/
 !Content/0_Tim/**
 !Source/**
 !Config/**
