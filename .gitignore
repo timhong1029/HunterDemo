@@ -1,9 +1,8 @@
 # =========================================================
-# Unreal Engine - Clean setup for gameplay programmer demos
-# Author: 洪超宇 (Hunter Project)
+# Unreal Engine - Hunter clean version (only 0_Tim content)
 # =========================================================
 
-# === Unreal auto-generated folders ===
+# --- Unreal auto-generated folders ---
 Binaries/
 DerivedDataCache/
 Intermediate/
@@ -11,39 +10,31 @@ Saved/
 .vs/
 .vscode/
 
-# === Ignore heavy UE content ===
-# Large binary assets that quickly bloat repo
-Content/**/Animations/
-Content/**/Meshes/
-Content/**/Textures/
-Content/**/Audio/
-Content/**/FX/
-Content/**/Materials/
-Content/**/Maps/
-Content/**/Cinematic/
-Content/**/VFX/
-Content/**/Environment/
-Content/**/Test/
+# --- Ignore all Content by default ---
+Content/**
 
-# === Keep lightweight gameplay-related content ===
-!Content/0_Tim/Blueprints/**
-!Content/0_Tim/Characters/**/DataAssets/**
-!Content/0_Tim/Components/**
-!Content/0_Tim/Data/**
-!Content/0_Tim/Systems/**
-!Content/0_Tim/UI/**
-!Content/0_Tim/Common/**
-!Content/0_Tim/Debug/**
-!Content/0_Tim/Tools/**
-
-# === Config & Source ===
+# --- Keep only your custom gameplay folder ---
+!Content/0_Tim/**
 !Source/**
 !Config/**
 !*.uproject
 !README.md
 !.gitignore
 
-# === OS / IDE files ===
+# --- Inside 0_Tim, ignore heavy resource subfolders ---
+Content/0_Tim/**/Animations/
+Content/0_Tim/**/Meshes/
+Content/0_Tim/**/Textures/
+Content/0_Tim/**/Audio/
+Content/0_Tim/**/FX/
+Content/0_Tim/**/Materials/
+Content/0_Tim/**/Maps/
+Content/0_Tim/**/Test/
+Content/0_Tim/**/Environment/
+Content/0_Tim/**/Cinematic/
+Content/0_Tim/**/VFX/
+
+# --- OS and IDE garbage ---
 .DS_Store
 Thumbs.db
 desktop.ini
