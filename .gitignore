@@ -1,0 +1,49 @@
+# Unreal Engine clean setup for Hunter project
+# --- Ignore heavy build and cache directories ---
+Binaries
+DerivedDataCache
+Intermediate
+Saved
+.vs
+.vscode
+
+# --- Ignore StarterContent and temporary content ---
+ContentStarterContent
+ContentDevelopers
+ContentCollections
+Content__ExternalActors__
+Content__ExternalObjects__
+
+# --- Ignore large non-essential folders in 0_Tim ---
+Content0_TimAudio
+Content0_TimFX
+Content0_TimMaterials
+Content0_TimMaps
+Content0_TimTest
+
+# --- Always keep your core logic and gameplay systems ---
+!Config
+!Source
+!Content0_TimBlueprints
+!Content0_TimCharacters
+!Content0_TimComponents
+!Content0_TimData
+!Content0_TimSystems
+!Content0_TimUI
+!Hunter.uproject
+!.gitignore
+!README.md
+
+# --- Ignore temporary and OS-specific files ---
+.log
+.sln
+.opensdf
+.suo
+.xcodeproj
+.xcworkspace
+.dll
+.exe
+.pdb
+.DS_Store
+Thumbs.db
+desktop.ini
